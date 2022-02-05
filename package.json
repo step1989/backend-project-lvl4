@@ -2,9 +2,14 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "task mananer",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf dist",
+    "build:server": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "build": "npm run prebuild && npm run build:server",
+    "start-dev": "nodemon -r dotenv/config --exec babel-node src/bin/server.js",
+    "start": "dist/bin/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/step1989/backend-project-lvl4/issues"
   },
-  "homepage": "https://github.com/step1989/backend-project-lvl4#readme"
+  "homepage": "https://github.com/step1989/backend-project-lvl4#readme",
+  "dependencies": {
+    "fastify": "^3.27.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@types/node": "^17.0.15",
+    "babel-node": "0.0.1-security",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
 }
