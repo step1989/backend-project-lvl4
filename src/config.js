@@ -1,7 +1,3 @@
-const getConfig = () => {
-    return {
-        restPort: process.env.REST_PORT
-    }
-}
-
-export { getConfig }
+export default () => ({
+  restPort: process.env.REST_PORT,
+});

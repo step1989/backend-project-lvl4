@@ -1,11 +1,11 @@
-// ESM
-import Fastify from 'fastify'
-const fastify = Fastify({
-    logger: true
-})
+import fastify from 'fastify';
 
-fastify.get('/', async (request, reply) => {
-    return { hello: 'world' }
-})
+export default () => {
+  const app = fastify({
+    logger: true,
+  });
 
-export { fastify }
+  app.get('/', async () => ({ hello: 'world' }));
+
+  return app;
+};
