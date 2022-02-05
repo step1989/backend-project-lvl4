@@ -22,16 +22,27 @@
   },
   "homepage": "https://github.com/step1989/backend-project-lvl4#readme",
   "dependencies": {
-    "fastify": "^3.27.1"
+    "fastify": "^3.27.1",
+    "g": "^2.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.0",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.0",
     "@types/node": "^17.0.15",
-    "babel-node": "0.0.1-security",
+    "babel-jest": "^27.4.6",
     "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.0.0",
+    "jest": "^27.5.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
   }
 }
